@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Modern Portfolio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .container {
+    max-width: 900px;
+    width: 100%;
+    background: #161b22;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 24px rgba(1,4,9,0.8);
+  }
+  header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #30363d;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #58a6ff;
+  }
+  header p {
+    margin: 6px 0 0;
+    font-weight: 300;
+    color: #8b949e;
+    letter-spacing: 0.05em;
+  }
+  nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+  }
+  nav a:hover,
+  nav a:focus {
+    color: #79c0ff;
+    outline: none;
+  }
+  section {
+    margin-top: 30px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #58a6ff;
+    margin-bottom: 15px;
+    border-left: 6px solid #58a6ff;
+    padding-left: 12px;
+  }
+  .about-me p {
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #adbac7;
+  }
+  .skills-list,
+  .projects-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .skills-list li {
+    background: #21262d;
+    padding: 8px 15px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: #58a6ff;
+    box-shadow: 0 2px 6px rgba(88,166,255,0.25);
+    user-select: none;
+  }
+  .projects-list li {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 10px;
+    padding: 15px 20px;
+    flex: 1 1 260px;
+    box-shadow: 0 4px 12px rgba(1,4,9,0.7);
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+  .projects-list li:hover {
+    background: #0f1420;
+    border-color: #58a6ff;
+  }
+  .project-title {
+    font-weight: 700;
+    color: #79c0ff;
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+  }
+  .project-desc {
+    font-weight: 300;
+    font-size: 1rem;
+    color: #adbac7;
+    margin-bottom: 10px;
+  }
+  .project-link {
+    color: #58a6ff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+  .project-link:hover,
+  .project-link:focus {
+    color: #79c0ff;
+    outline: none;
+    text-decoration: underline;
+  }
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #8b949e;
+  }
+  @media (max-width: 600px) {
+    .projects-list li {
+      flex: 1 1 100%;
+    }
+  }
+</style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1 tabindex="0">Your Name</h1>
+      <p tabindex="0">Web Developer & Designer</p>
+      <nav aria-label="Primary">
+        <a href="#about" tabindex="0">About</a>
+        <a href="#skills" tabindex="0">Skills</a>
+        <a href="#projects" tabindex="0">Projects</a>
+        <a href="#contact" tabindex="0">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about" class="about-me" aria-labelledby="about-title" tabindex="0">
+      <h2 id="about-title" class="section-title">About Me</h2>
+      <p>Hello! I'm a passionate web developer with a flair for creating modern, performant, and visually appealing websites and applications. I love turning ideas into reality using clean and maintainable code.</p>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">Skills</h2>
+      <ul class="skills-list" tabindex="0">
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Node.js</li>
+        <li>Responsive Design</li>
+        <li>Git & GitHub</li>
+        <li>UI/UX Design</li>
+        <li>API Integration</li>
+      </ul>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">Projects</h2>
+      <ul class="projects-list">
+        <li tabindex="0">
+          <h3 class="project-title">Project One</h3>
+          <p class="project-desc">A responsive e-commerce website built with React and Styled Components that offers seamless shopping experience across devices.</p>
+          <a href="https://example.com/project-one" target="_blank" rel="noopener" class="project-link" tabindex="0">View Project</a>
+        </li>
+        <li tabindex="0">
+          <h3 class="project-title">Project Two</h3>
+          <p class="project-desc">A task management app with real-time collaboration features using Node.js, Express, and Socket.IO.</p>
+          <a href="https://example.com/project-two" target="_blank" rel="noopener" class="project-link" tabindex="0">View Project</a>
+        </li>
+        <li tabindex="0">
+          <h3 class="project-title">Project Three</h3>
+          <p class="project-desc">A portfolio website showcasing animations and interactive UI components built with pure CSS and vanilla JavaScript.</p>
+          <a href="https://example.com/project-three" target="_blank" rel="noopener" class="project-link" tabindex="0">View Project</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title" tabindex="0" style="margin-top: 30px;">
+      <h2 id="contact-title" class="section-title">Get in Touch</h2>
+      <p>You can reach me via email at <a href="mailto:your.email@example.com" style="color:#58a6ff; text-decoration:none;">your.email@example.com</a> or on social media.</p>
+      <p>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" style="color:#58a6ff; text-decoration:none;" tabindex="0">LinkedIn</a> | 
+        <a href="https://github.com/yourprofile" target="_blank" rel="noopener" style="color:#58a6ff; text-decoration:none;" tabindex="0">GitHub</a> | 
+        <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener" style="color:#58a6ff; text-decoration:none;" tabindex="0">Twitter</a>
+      </p>
+    </section>
+
+    <footer tabindex="0" aria-label="Page footer">
+      &copy; 2024 Your Name &mdash; Crafted with care
+    </footer>
+  </div>
+</body>
+</html>
+
+```
